@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box; /* 设置全局的盒模型为 border-box */
+}
+body {
+    font-family: 'Montserrat',sans-serif; /* 设置页面的字体 */
+    /* background-image: linear-gradient(120deg,#ffffff,#ffffff);   */
+    background-image: url('../img/backiee-102533.jpg');
+    background-position: center; /* 将背景图像水平和垂直方向居中 */
+    background-size: cover; /* 图片将被缩放以尽可能填充背景区域，同时保持其宽高比 */
+    background-repeat: no-repeat; /* 设置背景不重复 */
+    display: flex; /* 设置弹性布局 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
+    justify-content: center; /* 在交叉轴上居中对齐 */
+    align-items: center; /* 在主轴上居中对齐 */
+    height: 100vh; /* 设置高度为视口的高度 */
+    margin: -20px 0 50px; /* 设置外边距 */
+}
+
+h1 {
+    font-weight: bold; /* 设置字体粗细为粗体 */
+    margin: 0; /* 消除标题的默认外边距 */
+}
+
+p {
+    font-size: 14px; /* 设置段落的字体大小 */
+    line-height: 20px; /* 设置行高 */
+    letter-spacing: .5px; /* 设置字符间距 */
+    margin: 20px 0 30px; /* 设置外边距 */
+}
+#title{
+    font-weight: 800;
+    font-size: 35px; /* 设置段落的字体大小 */
+    line-height: 20px; /* 设置行高 */
+    letter-spacing: .5px; /* 设置字符间距 */
+    margin: 20px 0 30px; /* 设置外边距 */
+}
+span {
+    font-size: 12px; /* 设置 span 元素的字体大小 */
+}
+a {
+    color: #333; /* 设置链接的颜色 */
+    font-size: 14px; /* 设置链接的字体大小 */
+    text-decoration: none; /* 去除链接的下划线 */
+    margin: 15px 0; /* 设置外边距 */
+}
+.container {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(25px); 
+    border-radius: 12px; /* 设置边框圆角 */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .30), 0 10px 10px rgba(0, 0, 0, .20); /* 设置阴影效果 */
+    position: relative; /* 设置定位为相对定位 */
+    overflow: hidden; /* 内容溢出时隐藏 */
+    width: 800px; /* 设置宽度 */
+    max-width: 100%; /* 设置最大宽度为100% */
+    min-height: 480px; /* 设置最小高度 */
+}
+
+.form-container form {
+    display: flex; /* 使用弹性布局 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
+    padding: 0 50px; /* 设置内边距 */
+    height: 100%; /* 设置高度为100% */
+    justify-content: center; /* 在交叉轴上居中对齐 */
+    text-align: center; /* 设置文本居中对齐 */
+}
+.social-container {
+    margin: 20px 0; /* 设置外边距 */
+}
+
+.social-container a {
+    border: 1px solid #ddd; /* 设置边框 */
+    border-radius: 50%; /* 设置圆角 */
+    display: inline-flex; /* 设置为行内弹性元素 */
+    justify-content: center; /* 在主轴上居中对齐 */
+    align-items: center; /* 在交叉轴上居中对齐 */
+    margin: 0 5px; /* 设置外边距 */
+    height: 40px; /* 设置高度 */
+    width: 40px; /* 设置宽度 */
+}
+
+.social-container a:hover {
+    background-color: #eee; /* 鼠标悬停时的背景颜色 */
+}
+
+
+.txtb {
+    border-bottom: 2px solid #adadad; /* 底部边框样式 */
+    position: relative; /* 设置定位为相对定位 */
+    margin: 10px 0; /* 设置外边距 */
+}
+
+.txtb input {
+    font-size: 18px; /* 设置输入框的字体大小 */
+    color: #000000; /* 设置文字颜色 */
+    border: none; /* 去除边框 */
+    width: 100%; /* 设置宽度为100% */
+    outline: none; /* 去除外边框 */
+    background: none; /* 去除背景 */
+    padding: 0 3px; /* 设置内边距 */
+    height: 35px; /* 设置高度 */
+}
+
+.txtb span::before {
+    content: attr(data-placeholder); /* 设置伪元素的内容 */
+    position: absolute; /* 设置定位为绝对定位 */
+    top: 50%; /* 设置顶部偏移量为50% */
+    left: 5px; /* 设置左侧偏移量为5px */
+    color: #140202; /* 设置文字颜色 */
+    transform: translateY(-50%); /* 沿Y轴平移自身高度的50% */
+    transition: .5s; /* 设置过渡效果 */
+}
+.txtb span::after {
+    content: ''; /* 设置伪元素的内容为空 */
+    position: absolute; /* 设置定位为绝对定位 */
+    left: 0%; /* 设置左侧偏移量为0% */
+    top: 100%; /* 设置顶部偏移量为100% */
+    width: 0%; /* 设置宽度为0 */
+    height: 2px; /* 设置高度为2px */
+    background-image: linear-gradient(120deg,#3498db,#8e44ad); /* 设置背景图片为线性渐变 */
+    transition: .5s; /* 设置过渡效果 */
+}
+
+.focus + span::before {
+    top: -5px; /* 设置顶部偏移量为-5px */
+}
+
+.focus + span::after {
+    width: 100%; /* 设置宽度为100% */
+}
+
+button {
+    border-radius: 15px; /* 设置边框圆角 */
+    border: 1px solid #ff4b2b; /* 设置边框样式 */
+    background: #ff4b2b; /* 设置背景颜色 */
+    color: #fff; /* 设置文字颜色 */
+    font-size: 12px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体粗细为粗体 */
+    padding: 12px 45px; /* 设置内边距 */
+    letter-spacing: 1px; /* 设置字母间距 */
+    text-transform: uppercase; /* 设置文本转换为大写 */
+    transition: transform 80ms ease-in; /* 设置过渡效果 */
+    cursor: pointer; /* 设置光标样式为手型 */
+}
+
+button:active {
+    transform: scale(.95); /* 设置点击时的缩放效果 */
+}
+
+button:focus {
+    outline: none; /* 去除外边框 */
+}
+
+button.ghost {
+    background: transparent; /* 设置背景为透明 */
+    border-color: #fff; /* 设置边框颜色 */
+}
+
+.form-container {
+    position: absolute; /* 设置定位为绝对定位 */
+    top: 0; /* 设置顶部偏移量为0 */
+    height: 100%; /* 设置高度为100% */
+    transition: all .6s ease-in-out; /* 设置过渡效果 */
+}
+
+.form-container button {
+    background: linear-gradient(120deg, #3498db, #8e44ad); /* 设置背景为线性渐变 */
+    border: none; /* 去除边框 */
+    background-size: 200%; /* 设置背景大小为200% */
+    color: #000000; /* 设置文字颜色 */
+    transition: .5s; /* 设置过渡效果 */
+}
+
+.form-container button:hover {
+    background-position: right; /* 设置背景位置为右侧 */
+}
+
+.sign-in-container {
+    left: 0; /* 设置左侧偏移量为0 */
+    width: 50%; /* 设置宽度为50% */
+    z-index: 2; /* 设置堆叠顺序 */
+}
+.sign-in-container form a {
+    position: relative; /* 设置定位为相对定位 */
+    left: 100px; /* 设置左侧偏移量为100px */
+}
+
+.sign-up-container {
+    left: 0; /* 设置左侧偏移量为0 */
+    width: 50%; /* 设置宽度为50% */
+    z-index: 1; /* 设置堆叠顺序 */
+    opacity: 0; /* 设置透明度为0 */
+}
+.sign-up-container button {
+    margin-top: 20px; /* 设置上外边距 */
+}
+.overlay-container {
+    position:absolute; /* 设置定位为绝对定位 */
+    top: 0; /* 设置顶部偏移量为0 */
+    left: 50%; /* 设置左侧偏移量为50% */
+    width: 50%; /* 设置宽度为50% */
+    height: 100%; /* 设置高度为100% */
+    overflow: hidden; /* 内容溢出时隐藏 */
+    transition: transform .6s ease-in-out; /* 设置过渡效果 */
+    z-index: 100; /* 设置堆叠顺序 */
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* 使用 rgba 设置背景颜色和透明度 */
+    backdrop-filter: blur(20px); /* 添加高斯模糊效果 */
+    /* background-image: linear-gradient(120deg,#3498db,#8e44ad);  */
+    /* background-image: url('bg.jpg');  */
+    color: #ffffff; /* 设置文字颜色 */
+    position: relative; /* 设置定位为相对定位 */
+    left: -100%; /* 设置左侧偏移量为-100% */
+    height: 100%; /* 设置高度为100% */
+    width: 200%; /* 设置宽度为200% */
+    transform: translateY(0); /* 设置垂直方向的平移为0 */
+    transition: transform .6s ease-in-out; /* 设置过渡效果 */
+}
+.overlay-panel {
+    position: absolute; /* 设置定位为绝对定位 */
+    top: 0; /* 设置顶部偏移量为0 */
+    display: flex; /* 使用弹性布局 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
+    justify-content: center; /* 在交叉轴上居中对齐 */
+    align-items: center; /* 在主轴上居中对齐 */
+    padding: 0 40px; /* 设置内边距 */
+    height: 100%; /* 设置高度为100% */
+    width: 50%; /* 设置宽度为50% */
+    text-align: center; /* 设置文本居中对齐 */
+    transform: translateY(0); /* 设置垂直方向的平移为0 */
+    transition: transform .6s ease-in-out; /* 设置过渡效果 */
+}
+.overlay-right {
+    right: 0;/* 设置右侧偏移量为0 */
+    transform: translateY(0);/* 设置垂直方向的平移为0 */
+    
+}
+
+.overlay-left {
+    transform: translateY(-20%); /* 设置垂直方向的平移为-20% */
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateY(100%); /* 设置垂直方向的平移为100% */
+}
+
+.container.container.right-panel-active .overlay-container {
+    transform: translateX(-100%); /* 设置水平方向的平移为-100% */
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%); /* 设置水平方向的平移为100% */
+    opacity: 1; /* 设置透明度为1 */
+    z-index: 5; /* 设置堆叠顺序 */
+}
+
+.container.container.right-panel-active .overlay {
+    transform: translateX(50%); /* 设置水平方向的平移为50% */
+}
+
+.container.container.right-panel-active .overlay-left {
+    transform: translateY(0); /* 设置垂直方向的平移为0 */
+}
+
+.container.container.right-panel-active .overlay-right {
+    transform: translateY(20%); /* 设置垂直方向的平移为20% */
+}
+/*
+
+.error-popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcccc;
+    border: 1px solid #ff6666;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease; !* 添加渐变效果 *!
+}
+.error-message {
+    color: #cc0000;
+    font-weight: bold;
+}*/

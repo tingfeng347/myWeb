@@ -1,0 +1,29 @@
+
+.error-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(30px);
+    border: 0px solid #ffffff;
+    padding: 10px 20px; /* 增加左右填充，使其更宽敞 */
+    border-radius: 8px; /* 增加圆角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 更细致的阴影 */
+    transition: all 0.3s ease; /* 渐变效果覆盖全部属性 */
+    z-index: 1000; /* 确保在页面的最前面 */
+    opacity: 1; /* 默认可见 */
+    visibility: visible; /* 默认占空间 */
+    font-size: 25px;
+}
+
+.error-popup:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* 悬停时增加阴影 */
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+}
+
+.error-message {
+    color: #a10000; /* 更深的红色增加对比 */
+    font-weight: bold;
+}

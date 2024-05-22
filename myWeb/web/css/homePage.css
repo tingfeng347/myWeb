@@ -1,0 +1,134 @@
+/* 基本的页面框架样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 使用柔性盒模型垂直布局 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* 整体背景色 */
+    color: #333; /* 基础字体颜色 */
+}
+
+/* 头部样式 */
+header {
+    background: rgba(6, 92, 204, 0.8);
+    backdrop-filter: blur(20px);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4); /* 阴影效果 */
+    left: 200px; /* 从导航栏边缘开始 */
+}
+
+/* 左侧导航栏样式 */
+nav {
+    position: fixed; /* 固定位置 */
+    height: 100%; /* 全屏高 */
+    width: 200px; /* 初始导航栏宽度 */
+    left: 0; /* 左侧对齐 */
+    top: 0; /* 顶部对齐 */
+    /* background: #333; 深灰色背景 */
+    box-shadow: 2px 0px 6px rgba(0,0,0,0.4); /* 阴影效果 */
+    padding-top: 40px; /* 顶部内边距 */
+    overflow: auto; /* 内容过多时滚动 */
+    transition: width 0.5s; /* 宽度变化动画 */
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;  /* 确保导航栏位于顶层 */
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* 背景色 */
+    backdrop-filter: blur(20px); /* 高斯模糊效果 */
+    z-index: -1; /* 将其放在导航栏下方 */
+}
+
+nav a {
+    display: block; /* 块状元素 */
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none; /* 无下划线 */
+    font-size: 16px; /* 字体大小 */
+}
+
+.toggle-btn {
+    display: block; /* 块状元素 */
+    color: white;
+    padding: 10px 100px;
+    text-decoration: none; /* 无下划线 */
+    font-size: 20px; /* 字体大小 */
+    cursor: pointer;
+    border: none; /* 无边框 */
+    background-color:rgb(96,96,96,0.5);
+}
+
+nav a:hover{
+    background-color: rgb(50, 54, 56,0.8); /* 悬停背景色 */
+    font-size: 18px;
+}
+
+
+/* 主体内容样式 */
+.content {
+    margin-left: 0px; /* 左边距为导航栏宽度 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 白色背景 */
+    min-height: 100vh; /* 最小高度 */
+    box-shadow: -1px 0 10px rgba(0,0,0,0.2); /* 左侧阴影 */
+    transition: margin-left 0.5s; /* 左边距变化动画 */
+}
+
+
+.layui-carousel {
+    transform: translate(600px, 100px); /* 偏移自身大小的一半来居中 */
+}
+
+/* 页脚样式 */
+footer {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0); /* 顶部阴影 */
+    position: fixed;
+    bottom: 0; /* 底部对齐 */
+    left: 0px; /* 从导航栏边缘开始 */
+    height: 25px;
+    display: flex; /* 启用弹性盒模型 */
+    align-items: center; /* 垂直居中对齐子项 */
+    justify-content: center; /* 水平居中对齐子项 */
+}
+
+/* 页脚内的段落样式 */
+footer p {
+    margin: 0; /* 移除默认的上下边距 */
+    color: black;
+}
+
+.button-container {
+    margin-left:37%; /* 例如，向右移动50px */
+}
+
+
+
+s-carousel {
+    margin: auto;
+    width: 1000px;
+    height: 500px; /* 设定高度 */
+    top: 0;
+    margin-top: 50px;
+}
+
+
+s-carousel img {
+    width: 100%; /* 设置宽度为容器的100% */
+    height: 500px; /* 设置高度与容器相同 */
+    object-fit: cover; /* 填充整个容器，可能会被裁剪 */
+}

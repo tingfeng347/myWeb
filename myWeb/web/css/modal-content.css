@@ -1,0 +1,14 @@
+/* 模态框背景色和边框 */
+.modal-content {
+    background-color: rgba(255, 255, 255);
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 模态框标题 */
+.modal-title {
+    font-size: 20px; /* 字号 */
+    color: #000000; /* 文字颜色 */
+}
+
